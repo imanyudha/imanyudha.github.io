@@ -22,19 +22,7 @@ hamburger.addEventListener("click", () => {
 const html = document.querySelector("html");
 const themeBtn = document.getElementById("theme-toggle");
 
-if (localStorage.getItem("mode") == "dark") {
-    darkMode();
-} else {
-    lightMode();
-}
-
-themeBtn.addEventListener("click", (e) => {
-    if (localStorage.getItem("mode") == "light") {
-        darkMode();
-    } else {
-        lightMode();
-    }
-})
+darkMode();
 
 
 function darkMode() {
@@ -43,11 +31,7 @@ function darkMode() {
     localStorage.setItem("mode", "dark");
 }
 
-function lightMode() {
-    html.classList.remove("dark");
-    themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
-    localStorage.setItem("mode", "light");
-}
+
 // TABS
 let tabs = document.querySelectorAll('.tab');
 let indicator = document.querySelector('.indicator');

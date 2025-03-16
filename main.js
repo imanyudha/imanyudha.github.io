@@ -27,7 +27,6 @@ darkMode();
 
 function darkMode() {
     html.classList.add("dark");
-    themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
     localStorage.setItem("mode", "dark");
 }
 
